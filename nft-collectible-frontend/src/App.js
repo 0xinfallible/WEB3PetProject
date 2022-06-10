@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import contract from './contracts/NFTCollectible.json';
-import { ethers } from 'ethers';
+// import { ethers } from 'ethers';
 
 const contractAddress = "0x355638a4eCcb777794257f22f50c289d4189F245";
 const abi = contract.abi;
@@ -75,7 +75,7 @@ function App() {
     <div className='main-app'>
       <h1>Scrappy Squirrels Tutorial</h1>
       <div>
-        {connectWalletButton()}
+        {currentAccount ? mintNftButton() : connectWalletButton()}
       </div>
     </div>
   )
