@@ -6,7 +6,6 @@ import { ethers } from 'ethers';
 const contractAddress = "0x355638a4eCcb777794257f22f50c289d4189F245";
 const abi = contract.abi;
 
-
 function App() {
 
   const [currentAccount, setCurrentAccount] = useState(null);
@@ -48,7 +47,6 @@ function App() {
     }
   }
 
-
   const mintNftHandler = async () => {
     try {
       const { ethereum } = window;
@@ -73,6 +71,14 @@ function App() {
     } catch (err) {
       console.log(err);
     }
+  }
+
+  const connectWalletButton = () => {
+    return (
+      <button onClick={connectWalletHandler} className='cta-button connect-wallet-button'>
+        Connect Wallet
+      </button>
+    )
   }
 
   const mintNftButton = () => {
