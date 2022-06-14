@@ -5,6 +5,7 @@ import { ethers } from 'ethers';
 
 const contractAddress = "0x355638a4eCcb777794257f22f50c289d4189F245";
 const abi = contract.abi;
+console.log(abi)
 
 function App() {
 
